@@ -1,6 +1,6 @@
 {
   "files": {
-    ".agent-environment/AGENTS.md": "abdf2b510d4f874cedf75d7a1e380a68f709693c143b9cd744d48207d5656b03",
+    ".agent-environment/AGENTS.md": "da81f97d6e4e7491bf9b7efaf92d2224345d2eb53a0a0e4f9d5aa5ab3edb782b",
     ".agent-environment/cursor/pstack-models.mdc": "774be634c7a9e20bb17ff2d4042db7b371efea1b1118471315d5b1d9d618c85b",
     ".agent-environment/routing.json": "10ac01d38eec2f9dca1e657f40091e623686a58d8f8f7ceddf7ed3b238e7639a",
     ".agent-environment/skills/find-unknowns/SKILL.md": "2a39d937528b19aa12f8f10cd5c4f3a81c131a67efcf2715f97dd4a7e11f427d",
@@ -9,7 +9,7 @@
     ".agent-environment/skills/poteto-mode/SKILL.md": "9848e57a7d4921d3907822cb81dab610ef7b320f3077b2042ab363ec915e99e3",
     ".agent-environment/skills/ship/SKILL.md": "dde50dddbf3ed109f72f74fe8640b6d824c0a7e484c7b16939438efc8ef09297",
     ".cursor/rules/pstack-models.mdc": "774be634c7a9e20bb17ff2d4042db7b371efea1b1118471315d5b1d9d618c85b",
-    ".cursor/rules/standing.mdc": "7390cd6abab1d10d31565104b4751641fe6b7420943e3f23af0c1da6dc974e32"
+    ".cursor/rules/standing.mdc": "c994e929569d495cc3d08f7010a7e638cf8853134177cef0396a26075165c913"
   },
   "links": {
     ".cursor/skills/find-unknowns": "../../.agent-environment/skills/find-unknowns",
@@ -31,7 +31,7 @@
     ".cursor/rules/standing.mdc": 420
   },
   "source": {
-    "commit": "694b26696212e3df55da332df4e4f16268bf2f48",
+    "commit": "e324f9bebfa3637b1a533d49e9b298c24fac7a33",
     "url": "https://origin.cursor.com/frxtured/agent-environment.git"
   },
   "version": 1
