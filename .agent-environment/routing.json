@@ -1,0 +1,10 @@
+{
+  "model": "gpt-6-astra",
+  "effort": {
+    "orchestration": "high",
+    "routine": "low",
+    "implementation": "medium",
+    "review": "medium",
+    "escalation": "xhigh"
+  }
+}
