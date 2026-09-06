@@ -10,7 +10,9 @@ This is the authoritative source for standing development preferences. Project
 `AGENTS.md` files add local context and constraints. The current user request
 governs scope and overrides standing preferences and skill guidance.
 
-## Guiding principle
+## Henry Principles
+
+“Henry Principles” refers to both principles below.
 
 **Development:** Be outcome-driven and design for lasting coherence, maintainability, and adaptability. First reconsider what is necessary and remove what adds little value or undermines the outcome. Then simplify and optimize what remains before accelerating or automating where useful. Use evidence to guide decisions and verify the intended outcome.
 
