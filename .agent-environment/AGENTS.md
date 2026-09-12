@@ -1,8 +1,7 @@
 # Working together
 
-This is the authoritative source for standing development preferences. Project
-`AGENTS.md` files add local context and constraints. The current user request
-governs scope and overrides standing preferences and skill guidance.
+Use this as the shared baseline; project instructions add relevant context and
+constraints. The current user request governs scope.
 
 ## Henry Principles
 
@@ -12,85 +11,30 @@ governs scope and overrides standing preferences and skill guidance.
 
 **Writing prompts and instructions:** Communicate clear intent, desired outcomes, and relevant context. Keep instructions minimal and positively framed, and entrust the agent to deliver the intended outcome.
 
-## Judgment and delivery
+## Delivery
 
-Infer the intended outcome, define success, and carry authorized work through
-implementation and verification. Resolve routine choices from evidence; ask when
-the answer would materially change scope, correctness, authority, or user intent.
-Prepare a concrete, reviewable result before requesting any remaining approval.
+Own the requested outcome through implementation, review, merge, deployment, and
+verification where applicable. Carry existing authorization forward. Resolve
+routine decisions from evidence; ask when input materially changes scope,
+correctness, or authority, after completing independent preparation.
 
-Put rich task context in discoverable artifacts. Use the existing system as
-evidence of needs and constraints; re-derive design choices from those needs.
+Preserve unrelated work and concurrent changes. Use scoped commits, recoverable
+changes, and the repository's release procedures. Direct merges are authorized
+after relevant review and checks pass. External actions follow the user's
+authorization and the project's ownership boundaries. Credentials stay in their
+configured facilities and are supplied only to their documented service and
+purpose; artifacts and reports contain credential references and status.
 
-Write a short plan before substantial multi-file work. Investigate defects through
-reproduction, a testable hypothesis, and verification. For features and bug fixes,
-establish meaningful behavior tests before implementation. Scale verification to
-the change; further checks should answer an unresolved question. Report local,
-deployed, and actual client evidence at the level each proves.
+Transfer payloads through verified paths: a host hop documented by the target
+environment, an established archive sync, or a commit containing the bytes.
+If these paths are unavailable, report the blocked transfer and the access needed.
 
-Preserve unrelated work. Inspect branch, remotes, worktrees, stashes, and dirty
-paths before changing shared Git state. Give writing agents separate worktrees
-and clear ownership. Verify the absolute repository root before their first write.
-Direct merges are authorized after relevant review and verification pass. Use
-the repository's merge format and deployment procedures, stage explicit paths,
-and retain recoverable evidence for cleanup and rollback. Credentials stay in
-the environment's credential facilities; production data and other external
-actions follow the user's authorization and the project's ownership boundaries.
+Use meaningful checks proportional to the change and its risk. Obtain independent
+review for substantive changes. Verify the intended result at the layer the user
+will use, and distinguish local checks, deployed state, and actual client evidence.
 
-## Delegation
-
-In Codex, [routing.json](routing.json) defines Astra and reasoning effort for each
-role. In Cursor, [the Poteto routing table](cursor/pstack-models.mdc) owns role
-selection; `inherit-parent` uses the current chat model, including Grok. Apply the
-routing policy for the client running the task. The orchestrator owns intent, design,
-decomposition, adjudication, integration, and release decisions. Delegate bounded
-independent work when it improves speed or confidence; integrate evidence and
-artifacts rather than replaying a worker's investigation.
-
-Start at the role's configured effort and increase it when difficulty or risk
-warrants it. Pass the model and effort explicitly where supported, using a bounded
-context fork when inheritance would override them. Verify actual routing from
-session metadata. For substantive changes, obtain an independent technical review.
-For high-risk work, add independent precision and adversarial review; settle
-disagreements through tests, reproductions, measurements, or primary documents.
-
-## Authoring instructions, skills, documentation, and tests
-
-Never encode guidance as anti-pattern lists or accumulating “never do X, Y, Z”
-prohibitions; this factory-level authoring rule is the sole exception.
-
-Express downstream guidance as current intent, desired behavior, essential
-boundaries, and success criteria. After a correction, update the implementation
-and its current guidance cleanly. Living artifacts describe the current system;
-Git and pull requests hold decision history. Backlogs contain open work. Dates
-describe freshness when freshness affects the evidence. Tests protect meaningful
-behavior and invariants; preferences remain revisitable.
-
-Give each fact one maintainable home: standing behavior here, project constraints
-in the project, executable invariants in tests or hooks, and optional background
-in a focused context artifact. Link to the owner when another surface needs it.
-
-## Developer environment
-
-On this Mac, heavy build output, package caches, traces, generated worktrees, and
-test scratch belong on the mounted writable external developer volume, under
-`/Volumes/External_SN850X_2TB/Developer/Scratch/<project>` or the project's external
-tree. Verify that volume before creating output and stop if it is unavailable.
-On Linux cloud workers, use the worker's writable project or scratch volume.
-Allocate task-owned paths and clean up disposable output on success and failure,
-while retaining useful evidence and shared state.
-
-Keep `TMPDIR` and `/tmp` under platform management. Internal `/tmp` is appropriate
-for small, short-lived tool-required intermediates. Apple-managed simulator state
-stays in its supported location: reuse shared devices and clean up only clones
-created by the task. Test setup scripts with isolated subprocess homes and
-explicit scratch paths so verification preserves the operator's configuration.
-
-Private background lives in the configured Codex home's `memory-topics/`:
-`developer-storage.md`, `home-network.md`, `ipo.md`, and `school.md`. Read a topic
-when directly relevant, and verify facts that can drift against the live system.
-Treat this context as evidence, with current instructions and observed state taking
-precedence.
-
-Communicate the outcome and evidence in plain, concise prose. Surface material
-uncertainty and the next action that resolves it.
+Keep project and environment details in their own focused guidance. Put rich task
+context in discoverable artifacts and give each fact one maintainable home.
+Maintain instructions around current intent and behavior; Git retains history.
+Communicate the outcome, evidence, material uncertainty, and any remaining action
+in plain, concise prose.
