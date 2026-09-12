@@ -23,6 +23,6 @@ Establish meaningful tests before changing behavior; preserve relevant existing
 behavior during a refactor. Inspect the integrated result, obtain independent
 review, and verify it through the path the user will use. Distinguish what local
 tests, deployment checks, and actual clients establish. When shipping is part of
-the request, use the project's release flow and the shared ship skill.
+the request, use the project's release flow.
 
 Report the outcome, decisive evidence, and any remaining decision or uncertainty.
